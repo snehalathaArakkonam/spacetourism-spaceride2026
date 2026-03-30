@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>SPACERIDE2026 | Future Space Tourism</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Exo+2:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <canvas id="starCanvas"></canvas>
+    <div class="site-wrapper">
+        <!-- NAVIGATION BAR -->
+        <nav class="navbar">
+            <div class="nav-brand">
+                <i class="fas fa-rocket"></i> SPACERIDE<span>2026</span>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="fleet.html">Fleet</a></li>
+                <li><a href="experiences.html">Experiences</a></li>
+                <li><a href="learn.html">Learn</a></li>
+                <li><a href="book.html">Book</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button id="soundToggle" class="sound-btn" title="Toggle Sound"><i class="fas fa-volume-up"></i></button>
+                <button id="langToggle" class="lang-btn" title="Toggle Language">🇮🇳 EN</button>
+            </div>
+        </nav>
+
+        <!-- MAIN CONTENT -->
+        <main>
+            <!-- HERO SECTION -->
+            <section class="hero">
+                <div class="hero-content">
+                    <h1 class="glow-text">LAUNCH YOUR JOURNEY <span class="year">2026</span></h1>
+                    <p id="heroTagline">Become a space explorer — the cosmos is calling!</p>
+                    <a href="book.html" class="cta-btn"><i class="fas fa-arrow-right"></i> Book Now</a>
+                </div>
+                <div class="floating-planets">
+                    <div class="planet earth"></div>
+                    <div class="planet mars"></div>
+                    <div class="planet moon"></div>
+                </div>
+                <div class="shooting-star"></div>
+            </section>
+
+            <!-- SOLAR SYSTEM SECTION -->
+            <section class="solar-interactive">
+                <h2>Interactive Solar System</h2>
+                <p class="sub">Click any planet for fun facts!</p>
+                <canvas id="solarCanvas" width="900" height="450"></canvas>
+                <div id="planetFactPopup" class="fact-popup hidden"></div>
+            </section>
+
+            <!-- COUNTDOWN AND NEWS SECTION -->
+            <section class="countdown-news">
+                <div class="countdown-card">
+                    <h3><i class="fas fa-calendar-alt"></i> Next Mars Mission 2026</h3>
+                    <div id="countdownTimer" class="timer">00d 00h 00m 00s</div>
+                </div>
+                <div class="news-ticker">
+                    <h3><i class="fas fa-newspaper"></i> Space News Flash</h3>
+                    <div class="ticker-wrap">
+                        <div class="ticker" id="newsTicker">🚀 ISRO's Gaganyaan crew selected! | 🔭 James Webb discovers new exoplanet | 🌕 India's Chandrayaan-4 update | 🛸 SpaceX Starship progress | 🌌 New black hole discovered!</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-social">
+                    <a href="https://github.com/snehalathaArakkonam" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/sneha-arakkonam" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:asnehalatha363@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+                <p>Made with ❤️ by Snehalatha</p>
+                <p>© 2026 SPACERIDE2026 — Future is Interstellar</p>
+            </div>
+            <button id="backToTop" class="rocket-top"><i class="fas fa-rocket"></i></button>
+        </footer>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="js/particles.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/solar-system.js"></script>
+    <script src="js/achievements.js"></script>
+    <script>
+        // Countdown timer for Mars Mission
+        function updateCountdown() {
+            const targetDate = new Date('2026-12-31T00:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            const timerElement = document.getElementById('countdownTimer');
+            if (timerElement) {
+                timerElement.textContent = `${String(days).padStart(2, '0')}d ${String(hours).padStart(2, '0')}h ${String(minutes).padStart(2, '0')}m ${String(seconds).padStart(2, '0')}s`;
+            }
+
+            if (distance < 0) {
+                if (timerElement) timerElement.textContent = 'MISSION ACTIVE!';
+            }
+        }
+
+        // Update countdown every second
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+</body>
+</html>

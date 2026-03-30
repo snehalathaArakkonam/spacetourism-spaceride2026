@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback | SPACERIDE2026</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <canvas id="starCanvas"></canvas>
+    <div class="site-wrapper">
+        <!-- NAVIGATION BAR -->
+        <nav class="navbar">
+            <div class="nav-brand"><i class="fas fa-rocket"></i> SPACERIDE<span>2026</span></div>
+            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="fleet.html">Fleet</a></li>
+                <li><a href="experiences.html">Experiences</a></li>
+                <li><a href="learn.html">Learn</a></li>
+                <li><a href="book.html">Book</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="feedback.html" class="active">Feedback</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button id="soundToggle" title="Toggle Sound"><i class="fas fa-volume-up"></i></button>
+                <button id="langToggle" title="Toggle Language">🇮🇳 EN</button>
+            </div>
+        </nav>
+
+        <!-- MAIN CONTENT -->
+        <main>
+            <h1 class="page-title">⭐ Share Your Experience</h1>
+            
+            <!-- Feedback Form -->
+            <section style="max-width: 600px; margin: 2rem auto;">
+                <form id="feedbackForm">
+                    <label for="name">Your Name *</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                    
+                    <label for="rating">How Would You Rate SPACERIDE2026? *</label>
+                    <select id="rating" name="rating" required>
+                        <option value="">-- Select Rating --</option>
+                        <option value="5">⭐⭐⭐⭐⭐ Absolutely Amazing!</option>
+                        <option value="4">⭐⭐⭐⭐ Very Good</option>
+                        <option value="3">⭐⭐⭐ Good</option>
+                        <option value="2">⭐⭐ Fair</option>
+                        <option value="1">⭐ Needs Improvement</option>
+                    </select>
+                    
+                    <label for="message">Your Feedback or Space Dreams *</label>
+                    <textarea id="message" name="message" placeholder="Share your thoughts, suggestions, or your space exploration dreams..." required minlength="10"></textarea>
+                    
+                    <button type="submit" style="width: 100%; padding: 1rem; background: linear-gradient(45deg, #00aaff, #cc00ff); color: white; border: none; border-radius: 25px; font-weight: bold; cursor: pointer; font-size: 1.1rem;">🚀 Send Feedback</button>
+                </form>
+            </section>
+            
+            <!-- Testimonials Section -->
+            <section style="max-width: 900px; margin: 3rem auto; padding: 2rem; background: rgba(0, 170, 255, 0.08); border-radius: 15px; border: 2px solid #00aaff;">
+                <h2 style="color: #00ffff; text-align: center; font-size: 1.8rem; margin-bottom: 2rem;">✨ What Our Explorers Say</h2>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                    <div style="background: rgba(0,0,0,0.3); padding: 1.5rem; border-radius: 10px; border-left: 3px solid #00ffff;">
+                        <div style="color: #ffaa00; font-size: 1.3rem; margin-bottom: 0.5rem;">⭐⭐⭐⭐⭐</div>
+                        <p style="color: #ddd; font-style: italic; line-height: 1.6; margin-bottom: 1rem;">
+                            "SPACERIDE2026 made me fall in love with space! The rocket simulator was incredible!"
+                        </p>
+                        <p style="color: #00aaff; font-weight: bold;">↑ Aditya Kumar, Delhi</p>
+                    </div>
+                    <div style="background: rgba(0,0,0,0.3); padding: 1.5rem; border-radius: 10px; border-left: 3px solid #00ffff;">
+                        <div style="color: #ffaa00; font-size: 1.3rem; margin-bottom: 0.5rem;">⭐⭐⭐⭐⭐</div>
+                        <p style="color: #ddd; font-style: italic; line-height: 1.6; margin-bottom: 1rem;">
+                            "The quiz was so fun and educational. I learned so much about Mars and the planets!"
+                        </p>
+                        <p style="color: #00aaff; font-weight: bold;">↑ Priya Sharma, Mumbai</p>
+                    </div>
+                    <div style="background: rgba(0,0,0,0.3); padding: 1.5rem; border-radius: 10px; border-left: 3px solid #00ffff;">
+                        <div style="color: #ffaa00; font-size: 1.3rem; margin-bottom: 0.5rem;">⭐⭐⭐⭐⭐</div>
+                        <p style="color: #ddd; font-style: italic; line-height: 1.6; margin-bottom: 1rem;">
+                            "Best space tourism website! Can't wait for 2026 to book my Mars trip!"
+                        </p>
+                        <p style="color: #00aaff; font-weight: bold;">↑ Rohan Patel, Bangalore</p>
+                    </div>
+                    <div style="background: rgba(0,0,0,0.3); padding: 1.5rem; border-radius: 10px; border-left: 3px solid #00ffff;">
+                        <div style="color: #ffaa00; font-size: 1.3rem; margin-bottom: 0.5rem;">⭐⭐⭐⭐⭐</div>
+                        <p style="color: #ddd; font-style: italic; line-height: 1.6; margin-bottom: 1rem;">
+                            "The avatar customizer is awesome! Love creating my space explorer persona!"
+                        </p>
+                        <p style="color: #00aaff; font-weight: bold;">↑ Neha Singh, Chennai</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-social">
+                    <a href="https://github.com/snehalathaArakkonam" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/sneha-arakkonam" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:asnehalatha363@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+                <p>Made with ❤️ by Snehalatha</p>
+                <p>© 2026 SPACERIDE2026 — Future is Interstellar</p>
+            </div>
+            <button id="backToTop" class="rocket-top"><i class="fas fa-rocket"></i></button>
+        </footer>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="js/particles.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/feedback.js"></script>
+    <script src="js/achievements.js"></script>
+</body>
+</html>

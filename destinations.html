@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations | SPACERIDE2026</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <canvas id="starCanvas"></canvas>
+    <div class="site-wrapper">
+        <!-- NAVIGATION BAR -->
+        <nav class="navbar">
+            <div class="nav-brand"><i class="fas fa-rocket"></i> SPACERIDE<span>2026</span></div>
+            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html" class="active">Destinations</a></li>
+                <li><a href="fleet.html">Fleet</a></li>
+                <li><a href="experiences.html">Experiences</a></li>
+                <li><a href="learn.html">Learn</a></li>
+                <li><a href="book.html">Book</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button id="soundToggle" title="Toggle Sound"><i class="fas fa-volume-up"></i></button>
+                <button id="langToggle" title="Toggle Language">🇮🇳 EN</button>
+            </div>
+        </nav>
+
+        <!-- MAIN CONTENT -->
+        <main>
+            <h1 class="page-title">✨ Cosmic Destinations ✨</h1>
+            <div class="card-grid">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1614732414444-096e5f1122d5?w=400" alt="Moon">
+                    <h3>🌙 Moon</h3>
+                    <p>Earth's companion - Low gravity exploration. Visit the historic landing sites and experience lunar tourism.</p>
+                    <button class="explore360">Explore in 360°</button>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?w=400" alt="Mars">
+                    <h3>🔴 Mars</h3>
+                    <p>The Red Planet - Explore Olympus Mons, Valles Marineris, and ancient water valleys. The ultimate destination!</p>
+                    <button class="explore360">Explore in 360°</button>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1446776711069-3489ebaad266?w=400" alt="ISS">
+                    <h3>🛰️ ISS Station</h3>
+                    <p>International Space Station - Achieve weightlessness, conduct experiments, and enjoy Earth views.</p>
+                    <button class="explore360">Explore in 360°</button>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1543722530-d2c3201371e7?w=400" alt="Europa">
+                    <h3>💧 Europa</h3>
+                    <p>Jupiter's Moon - Discover subsurface oceans and pristine ice landscapes. Ultimate scientific frontier!</p>
+                    <button class="explore360">Explore in 360°</button>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=400" alt="Titan">
+                    <h3>🌊 Titan</h3>
+                    <p>Saturn's Largest Moon - Explore methane lakes and organic-rich atmosphere. Stunning alien landscape!</p>
+                    <button class="explore360">Explore in 360°</button>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=400" alt="Venus">
+                    <h3>♀️ Venus</h3>
+                    <p>The Morning Star - High-altitude cloud cities and extreme atmospheric research missions.</p>
+                    <button class="explore360">Explore in 360°</button>
+                </div>
+            </div>
+        </main>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-social">
+                    <a href="https://github.com/snehalathaArakkonam" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/sneha-arakkonam" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:asnehalatha363@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+                <p>Made with ❤️ by Snehalatha</p>
+                <p>© 2026 SPACERIDE2026 — Future is Interstellar</p>
+            </div>
+            <button id="backToTop" class="rocket-top"><i class="fas fa-rocket"></i></button>
+        </footer>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="js/particles.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/achievements.js"></script>
+    <script>
+        // Explore in 360° buttons
+        document.querySelectorAll('.explore360').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const destination = this.closest('.card').querySelector('h3').textContent;
+                playSound('whoosh');
+                alert('360° VR experience for ' + destination + ' coming soon! 🚀\n\nThis will provide immersive panoramic views of ' + destination);
+            });
+        });
+    </script>
+</body>
+</html>

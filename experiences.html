@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiences | SPACERIDE2026</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <canvas id="starCanvas"></canvas>
+    <div class="site-wrapper">
+        <!-- NAVIGATION BAR -->
+        <nav class="navbar">
+            <div class="nav-brand"><i class="fas fa-rocket"></i> SPACERIDE<span>2026</span></div>
+            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="fleet.html">Fleet</a></li>
+                <li><a href="experiences.html" class="active">Experiences</a></li>
+                <li><a href="learn.html">Learn</a></li>
+                <li><a href="book.html">Book</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button id="soundToggle" title="Toggle Sound"><i class="fas fa-volume-up"></i></button>
+                <button id="langToggle" title="Toggle Language">🇮🇳 EN</button>
+            </div>
+        </nav>
+
+        <!-- MAIN CONTENT -->
+        <main>
+            <h1 class="page-title">🚀 Rocket Launch Simulator</h1>
+            <div style="max-width: 700px; margin: 2rem auto; background: rgba(0, 170, 255, 0.08); padding: 2rem; border-radius: 20px; border: 2px solid #00aaff;">
+                <h3 style="color: #00ffff; text-align: center; margin-bottom: 1.5rem;">Control Your Rocket! 🎮</h3>
+                <div style="display: grid; gap: 1.5rem;">
+                    <div>
+                        <label for="throttleSlider" style="display: block; color: #00ffff; font-weight: bold; margin-bottom: 0.5rem;">Throttle Power: <span id="throttleValue">50</span>%</label>
+                        <input type="range" id="throttleSlider" min="0" max="100" value="50" style="width: 100%; cursor: pointer;">
+                    </div>
+                    <canvas id="rocketSimCanvas" width="650" height="300" style="background: rgba(0,0,0,0.7); border: 2px solid #00ffff; border-radius: 10px; display: block; margin: 0 auto;"></canvas>
+                    <button id="launchBtn" style="padding: 1rem 2rem; background: linear-gradient(45deg, #00aaff, #cc00ff); color: white; border: none; border-radius: 25px; font-weight: bold; cursor: pointer; font-size: 1.1rem;">LAUNCH ROCKET 🚀</button>
+                </div>
+            </div>
+        </main>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-social">
+                    <a href="https://github.com/snehalathaArakkonam" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/sneha-arakkonam" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:asnehalatha363@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+                <p>Made with ❤️ by Snehalatha</p>
+                <p>© 2026 SPACERIDE2026 — Future is Interstellar</p>
+            </div>
+            <button id="backToTop" class="rocket-top"><i class="fas fa-rocket"></i></button>
+        </footer>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="js/particles.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/rocket-simulator.js"></script>
+    <script src="js/achievements.js"></script>
+    <script>
+        // Update throttle display
+        const throttleSlider = document.getElementById('throttleSlider');
+        if (throttleSlider) {
+            throttleSlider.addEventListener('input', function() {
+                document.getElementById('throttleValue').textContent = this.value;
+            });
+        }
+    </script>
+</body>
+</html>

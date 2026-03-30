@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | SPACERIDE2026</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <canvas id="starCanvas"></canvas>
+    <div class="site-wrapper">
+        <!-- NAVIGATION BAR -->
+        <nav class="navbar">
+            <div class="nav-brand"><i class="fas fa-rocket"></i> SPACERIDE<span>2026</span></div>
+            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="fleet.html">Fleet</a></li>
+                <li><a href="experiences.html">Experiences</a></li>
+                <li><a href="learn.html">Learn</a></li>
+                <li><a href="book.html">Book</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button id="soundToggle" title="Toggle Sound"><i class="fas fa-volume-up"></i></button>
+                <button id="langToggle" title="Toggle Language">🇮🇳 EN</button>
+            </div>
+        </nav>
+
+        <!-- MAIN CONTENT -->
+        <main>
+            <h1 class="page-title">📸 Space Gallery</h1>
+            <p style="text-align: center; color: #00aaff; font-size: 1.1rem; margin-bottom: 2rem;">Click any image to view in lightbox 🖼️</p>
+            <div class="lightbox-container">
+                <div class="lightbox-item" onclick="openLightbox('https://images.unsplash.com/photo-1614313913007-2c4ae8ce32d6?w=1200')">
+                    <img src="https://images.unsplash.com/photo-1614313913007-2c4ae8ce32d6?w=400" alt="Rocket Launch">
+                    <div class="lightbox-item-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="lightbox-item" onclick="openLightbox('https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=1200')">
+                    <img src="https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=400" alt="Planet Earth">
+                    <div class="lightbox-item-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="lightbox-item" onclick="openLightbox('https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=1200')">
+                    <img src="https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=400" alt="Astronaut">
+                    <div class="lightbox-item-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="lightbox-item" onclick="openLightbox('https://images.unsplash.com/photo-1462332420958-a05adc00413f?w=1200')">
+                    <img src="https://images.unsplash.com/photo-1462332420958-a05adc00413f?w=400" alt="Galaxy">
+                    <div class="lightbox-item-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="lightbox-item" onclick="openLightbox('https://images.unsplash.com/photo-1446776877081-d282a0f896e2?w=1200')">
+                    <img src="https://images.unsplash.com/photo-1446776877081-d282a0f896e2?w=400" alt="Moon">
+                    <div class="lightbox-item-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="lightbox-item" onclick="openLightbox('https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?w=1200')">
+                    <img src="https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?w=400" alt="Mars">
+                    <div class="lightbox-item-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+            </div>
+        </main>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-social">
+                    <a href="https://github.com/snehalathaArakkonam" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/sneha-arakkonam" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:asnehalatha363@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+                <p>Made with ❤️ by Snehalatha</p>
+                <p>© 2026 SPACERIDE2026 — Future is Interstellar</p>
+            </div>
+            <button id="backToTop" class="rocket-top"><i class="fas fa-rocket"></i></button>
+        </footer>
+    </div>
+
+    <!-- LIGHTBOX MODAL -->
+    <div id="lightboxModal" class="modal">
+        <span class="close-btn" onclick="closeLightbox()" style="position: absolute; top: 20px; right: 40px; font-size: 3rem;">&times;</span>
+        <img id="lightboxImage" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E" alt="Gallery Image" style="max-width: 90%; max-height: 90%; border-radius: 10px;">
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="js/particles.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/achievements.js"></script>
+    <script>
+        function openLightbox(imageSrc) {
+            const modal = document.getElementById('lightboxModal');
+            const img = document.getElementById('lightboxImage');
+            img.src = imageSrc;
+            modal.classList.add('show');
+            playSound('whoosh');
+        }
+        
+        function closeLightbox() {
+            const modal = document.getElementById('lightboxModal');
+            modal.classList.remove('show');
+        }
+        
+        // Close lightbox when clicking outside image
+        document.getElementById('lightboxModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+</html>

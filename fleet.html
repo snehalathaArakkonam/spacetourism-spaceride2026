@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fleet | SPACERIDE2026</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <canvas id="starCanvas"></canvas>
+    <div class="site-wrapper">
+        <!-- NAVIGATION BAR -->
+        <nav class="navbar">
+            <div class="nav-brand"><i class="fas fa-rocket"></i> SPACERIDE<span>2026</span></div>
+            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="fleet.html" class="active">Fleet</a></li>
+                <li><a href="experiences.html">Experiences</a></li>
+                <li><a href="learn.html">Learn</a></li>
+                <li><a href="book.html">Book</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button id="soundToggle" title="Toggle Sound"><i class="fas fa-volume-up"></i></button>
+                <button id="langToggle" title="Toggle Language">🇮🇳 EN</button>
+            </div>
+        </nav>
+
+        <!-- MAIN CONTENT -->
+        <main>
+            <h1 class="page-title">🚀 Our Premium Fleet</h1>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>🛸 Starship Alpha</h3>
+                    <div style="background: rgba(0,170,255,0.1); padding: 1rem; margin: 1rem 0; border-radius: 8px; border-left: 3px solid #00ffff;">
+                        <p><strong>Type:</strong> Long-Range Explorer</p>
+                        <p><strong>Capacity:</strong> 12 passengers + 3 crew</p>
+                        <p><strong>Max Speed:</strong> 0.1c (relativistic speeds)</p>
+                        <p><strong>Range:</strong> Jupiter missions</p>
+                        <p><strong>Features:</strong> Advanced life support, hydroponics garden, observation deck</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>🛰️ Orbital Express</h3>
+                    <div style="background: rgba(0,170,255,0.1); padding: 1rem; margin: 1rem 0; border-radius: 8px; border-left: 3px solid #00ffff;">
+                        <p><strong>Type:</strong> Suborbital & LEO Transport</p>
+                        <p><strong>Capacity:</strong> 8 passengers + 2 crew</p>
+                        <p><strong>Max Altitude:</strong> 400 km (ISS orbit)</p>
+                        <p><strong>Flight Time:</strong> 2 hours to orbit</p>
+                        <p><strong>Features:</strong> Rapid deployment, space tourism optimized</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>🌙 Lunar Lander</h3>
+                    <div style="background: rgba(0,170,255,0.1); padding: 1rem; margin: 1rem 0; border-radius: 8px; border-left: 3px solid #00ffff;">
+                        <p><strong>Type:</strong> Moon Surface Operations</p>
+                        <p><strong>Capacity:</strong> 6 passengers + 2 crew</p>
+                        <p><strong>Surface Ops:</strong> 7 days</p>
+                        <p><strong>Gravity Assist:</strong> Advanced stability system</p>
+                        <p><strong>Features:</strong> Pressurized rover, mining equipment, research lab</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>♂️ Mars Explorer</h3>
+                    <div style="background: rgba(0,170,255,0.1); padding: 1rem; margin: 1rem 0; border-radius: 8px; border-left: 3px solid #00ffff;">
+                        <p><strong>Type:</strong> Interplanetary Cruise</p>
+                        <p><strong>Capacity:</strong> 20 passengers + 5 crew</p>
+                        <p><strong>Journey Time:</strong> 6-9 months</p>
+                        <p><strong>Surface Stay:</strong> Up to 30 days</p>
+                        <p><strong>Features:</strong> Zero-G gym, entertainment system, scientific instruments</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>🌊 Europa Probe</h3>
+                    <div style="background: rgba(0,170,255,0.1); padding: 1rem; margin: 1rem 0; border-radius: 8px; border-left: 3px solid #00ffff;">
+                        <p><strong>Type:</strong> Scientific Expedition</p>
+                        <p><strong>Capacity:</strong> 10 passengers + 4 crew</p>
+                        <p><strong>Duration:</strong> 14 months roundtrip</p>
+                        <p><strong>Specialty:</strong> Subsurface exploration, cryogenic systems</p>
+                        <p><strong>Features:</strong> Ice coring equipment, underwater drones, lab quarters</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>⭐ Solar Cruiser</h3>
+                    <div style="background: rgba(0,170,255,0.1); padding: 1rem; margin: 1rem 0; border-radius: 8px; border-left: 3px solid #00ffff;">
+                        <p><strong>Type:</strong> Luxury Space Yacht</p>
+                        <p><strong>Capacity:</strong> 15 passengers + 4 crew</p>
+                        <p><strong>Features:</strong> Fine dining, spa, panoramic viewing deck</p>
+                        <p><strong>Destinations:</strong> Asteroid belt tours, solar corona studies</p>
+                        <p><strong>Amenities:</strong> Zero-G swimming, concert hall, library</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-social">
+                    <a href="https://github.com/snehalathaArakkonam" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/sneha-arakkonam" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:asnehalatha363@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+                <p>Made with ❤️ by Snehalatha</p>
+                <p>© 2026 SPACERIDE2026 — Future is Interstellar</p>
+            </div>
+            <button id="backToTop" class="rocket-top"><i class="fas fa-rocket"></i></button>
+        </footer>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="js/particles.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/achievements.js"></script>
+</body>
+</html>
